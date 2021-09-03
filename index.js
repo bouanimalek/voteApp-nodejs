@@ -24,7 +24,17 @@ app.get("/", (req, res) => {
 // authApi(jwt, passport, passport-http-bearer)
 const authApi = require("./routes/authApi");
 
+// userApi
+const userApi = require("./routes/userApi");
+// subjectApi
+const subjectApi = require("./routes/subjectApi");
+// voteApi
+const voteApi = require("./routes/voteApi");
+
 app.use("", authApi);
+app.use("", userApi);
+app.use("", subjectApi);
+app.use("", voteApi);
 
 
 app.listen(port, () => {

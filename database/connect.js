@@ -1,14 +1,13 @@
 const mongoose = require("mongoose");
 
 const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-};
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  };
 
-mongoose
-  .connect("mongodb://localhost:27017/eventDB", options)
+  mongoose.connect("mongodb://localhost:27017/voteDB", options)
   .then((success) => {
     console.log("=> Database connected successfully!");
   })
